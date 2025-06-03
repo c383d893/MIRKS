@@ -431,7 +431,7 @@ indep_cont_plot(mod,dat,dat$height_i)
 abovepath <- read.csv("data/MIRKS_aboveground_path_est.csv", head=T)
 abovepath$path_no <- as.factor(abovepath$path_no)
 abhm <- ggplot(abovepath, aes(path_no, plantsp, fill= p.value)) + 
-  ggtitle("Above-ground biomass survival") +
+  ggtitle("Above-ground biomass") +
   xlab("Pathogen treatment") +
   ylab("Plant species") +
   geom_tile() +
@@ -447,7 +447,7 @@ BPdat <- read.csv("data/MIRKS_belowground_path_est.csv")
 BPdat$path_no <- as.factor(BPdat$path_no)
 bghm <- 
   ggplot(BPdat, aes(path_no, plantsp, fill= p.value)) + 
-  ggtitle("Below-ground biomass survival") +
+  ggtitle("Below-ground biomass") +
   xlab("Pathogen treatment") +
   ylab("Plant species") +
   geom_tile() +
